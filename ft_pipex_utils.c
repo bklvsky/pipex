@@ -6,7 +6,7 @@
 /*   By: dselmy <dselmy@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 00:56:01 by dselmy            #+#    #+#             */
-/*   Updated: 2021/09/20 01:06:39 by dselmy           ###   ########.fr       */
+/*   Updated: 2021/09/21 21:23:04 by dselmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,5 @@ void	wait_for_all(void)
 
 	temp = 1;
 	while (temp > 0)
-	{
 		temp = wait(NULL);
-	}
 }

@@ -6,12 +6,11 @@
 /*   By: dselmy <dselmy@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 22:41:00 by dselmy            #+#    #+#             */
-/*   Updated: 2021/09/20 01:00:34 by dselmy           ###   ########.fr       */
+/*   Updated: 2021/09/21 21:19:17 by dselmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/ft_pipex.h"
-#include <stdio.h>
 
 char	*find_path(char **paths_tmp, char **cmd_args)
 {
