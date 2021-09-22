@@ -6,7 +6,7 @@
 /*   By: dselmy <dselmy@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 22:41:00 by dselmy            #+#    #+#             */
-/*   Updated: 2021/09/21 21:19:17 by dselmy           ###   ########.fr       */
+/*   Updated: 2021/09/22 19:22:50 by dselmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*find_path(char **paths_tmp, char **cmd_args)
 	while (paths_tmp[++i])
 	{
 		tmp = ft_strjoin(paths_tmp[i], "/");
-		new_path = ft_strjoin(tmp, cmd_args[0]);
 		if (!tmp)
 			error_exit();
+		new_path = ft_strjoin(tmp, cmd_args[0]);
 		free(tmp);
 		if (!new_path)
 			error_exit();
