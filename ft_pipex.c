@@ -6,7 +6,7 @@
 /*   By: dselmy <dselmy@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 22:41:00 by dselmy            #+#    #+#             */
-/*   Updated: 2021/09/22 19:22:50 by dselmy           ###   ########.fr       */
+/*   Updated: 2021/09/24 17:04:08 by dselmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	pipe_in(char *cmd1, int *pipefd, int fd_in)
 	close(pipefd[0]);
 	if (dup2(fd_in, 0) < 0 || dup2(pipefd[1], 1) < 0)
 		error_exit();
-	if (cmd1[0] != '/')
+	if (cmd1[0] != '/' && cmd1[1] != '/')
 		find_exec(cmd_args);
 	else
 		execve(cmd_args[0], cmd_args, __environ);
@@ -92,7 +92,7 @@ void	pipe_out(char *cmd2, int *pipefd, int fd_out)
 	close(pipefd[1]);
 	if (dup2(fd_out, 1) < 0 || dup2(pipefd[0], 0) < 0)
 		error_exit();
-	if (cmd2[0] != '/')
+	if (cmd2[0] != '/' && cmd2[1] != '/')
 		find_exec(cmd_args);
 	else
 		execve(cmd_args[0], cmd_args, __environ);
