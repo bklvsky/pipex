@@ -6,7 +6,7 @@
 /*   By: dselmy <dselmy@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 23:23:58 by dselmy            #+#    #+#             */
-/*   Updated: 2021/09/20 00:56:53 by dselmy           ###   ########.fr       */
+/*   Updated: 2021/09/24 17:23:49 by dselmy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 	fd_in = open(argv[1], O_RDONLY);
-	fd_out = open(argv[4], O_CREAT | O_WRONLY);
+	fd_out = open(argv[4], O_CREAT | O_WRONLY | O_TRUNC);
 	if (fd_in < 0)
 	{
 		put_problem_ident(argv[1]);
